@@ -4,7 +4,7 @@ var itemSchema=mongoose.Schema({
     name:String,
     price:Number,
     category:{
-        type:mongoose.schema.ObjectId,
+        type:mongoose.Schema.ObjectId,
         ref:"Category"
     }
 });
