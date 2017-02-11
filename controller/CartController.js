@@ -19,7 +19,7 @@ class cartController {
         })
     }
 
-    createOne(req, res, next) {
+    create(req, res, next) {
 
         Cart.create(req.body, function (e, item) {
             if (e) {
@@ -29,7 +29,7 @@ class cartController {
         })
     }
 
-    updateOne(req, res, next) {
+    update(req, res, next) {
         Cart.update({_id: req.params.id}, function (e, item) {
             if (e) {
                 res.sendStatus(400);
@@ -38,7 +38,7 @@ class cartController {
         })
     }
 
-    deleteOne(req, res, next) {
+    delete(req, res, next) {
         Cart.remove({_id: req.params.id}, function (e, item) {
             if (e) {
                 res.sendStatus(400);

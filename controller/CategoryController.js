@@ -19,7 +19,7 @@ class categoryController {
         })
     }
 
-    createOne(req, res, next) {
+    create(req, res, next) {
 
         Category.create(req.body, function (e, item) {
             if (e) {
@@ -29,7 +29,7 @@ class categoryController {
         })
     }
 
-    updateOne(req, res, next) {
+    update(req, res, next) {
         Category.update({_id: req.params.id}, function (e, item) {
             if (e) {
                 res.sendStatus(400);
@@ -38,7 +38,7 @@ class categoryController {
         })
     }
 
-    deleteOne(req, res, next) {
+    delete(req, res, next) {
         Category.remove({_id: req.params.id}, function (e, item) {
             if (e) {
                 res.sendStatus(400);

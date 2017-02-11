@@ -7,8 +7,8 @@ const itemCtrl = new ItemController();
 
 router.get('/', itemCtrl.getAll);
 router.get('/:id', itemCtrl.getOne);
-router.post('/', itemCtrl.createOne);
-router.put('/:id', itemCtrl.updateOne);
-router.delete('/:id', itemCtrl.deleteOne);
+router.post('/', itemCtrl.create);
+router.put('/:id', itemCtrl.update);
+router.delete('/:id', itemCtrl.delete);
 
 module.exports = router;

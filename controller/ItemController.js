@@ -19,7 +19,7 @@ class ItemController {
         })
     }
 
-    createOne(req, res, next) {
+    create(req, res, next) {
 
         Item.create(req.body, function (e, item) {
             if (e) {
@@ -29,7 +29,7 @@ class ItemController {
         })
     }
 
-    updateOne(req, res, next) {
+    update(req, res, next) {
         Item.update({_id: req.params.id}, function (e, item) {
             if (e) {
                 res.sendStatus(400);
@@ -38,7 +38,7 @@ class ItemController {
         })
     }
 
-    deleteOne(req, res, next) {
+    delete(req, res, next) {
         Item.remove({_id: req.params.id}, function (e, item) {
             if (e) {
                 res.sendStatus(400);
