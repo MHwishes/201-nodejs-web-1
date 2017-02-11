@@ -1,8 +1,8 @@
-const Item = require('../model/item');
+const Category = require('../model/category');
 
-class ItemController {
+class categoryController {
     getAll(req, res, next) {
-        Item.find(function (e, items) {
+        Category.find(function (e, items) {
             if (e) {
                 res.sendStatus(400);
             }
@@ -11,7 +11,7 @@ class ItemController {
     }
 
     getOne(req, res, next) {
-        Item.findOne({_id: req.params.id}, function (e, item) {
+        Category.findOne({_id: req.params.id}, function (e, item) {
             if (e) {
                 res.sendStatus(400);
             }
@@ -21,7 +21,7 @@ class ItemController {
 
     createOne(req, res, next) {
 
-        Item.create(req.body, function (e, item) {
+        Category.create(req.body, function (e, item) {
             if (e) {
                 res.sendStatus(400);
             }
@@ -30,7 +30,7 @@ class ItemController {
     }
 
     updateOne(req, res, next) {
-        Item.update({_id: req.params.id}, function (e, item) {
+        Category.update({_id: req.params.id}, function (e, item) {
             if (e) {
                 res.sendStatus(400);
             }
@@ -39,7 +39,7 @@ class ItemController {
     }
 
     deleteOne(req, res, next) {
-        Item.remove({_id: req.params.id}, function (e, item) {
+        Category.remove({_id: req.params.id}, function (e, item) {
             if (e) {
                 res.sendStatus(400);
             }
@@ -48,4 +48,4 @@ class ItemController {
     }
 }
 
-module.exports = ItemController;
+module.exports = categoryController;
