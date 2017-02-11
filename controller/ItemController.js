@@ -43,7 +43,7 @@ class ItemController {
             if (e) {
                 res.sendStatus(400);
             }
-            res.status(204).end();
+            res.sendStatus(204);
         });
     }
 }
